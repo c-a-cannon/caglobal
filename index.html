@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noai, noimageai">
 <title>Caroline Cannon — Program & Project Management</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,9 +56,17 @@
 
   /* ---------- HERO ---------- */
   header.hero{
-    padding: 96px 0 40px;
-    position: relative;
+  padding: 96px 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 40px;
+  align-items: center;
+}
+@media (max-width: 700px){
+  header.hero{
+    grid-template-columns: 1fr;
   }
+}
   header.hero .eyebrow{ margin-bottom: 22px; }
   h1.name{
   font-family: 'Fraunces', serif;
@@ -86,10 +95,10 @@
   }
   .hero-photo{
   width: 100%;
-  max-width: 320px;
-  height: 320px;
+  max-width: 260px;
+  height: 260px;
   object-fit: cover;
-  object-position: top center;
+  object-position: center 30%;
   border-radius: 3px;
   display: block;
 }
@@ -246,14 +255,15 @@
 <div class="wrap">
 
   <header class="hero">
+  <div class="hero-text">
     <div class="eyebrow">Program &amp; Project Management · 7+ Years</div>
-    <h1 class="name">Caroline Cannon</h1>
-    <p class="ca-global">CA Global — the name for a career that's never stayed in one lane, one system, or one place.</p>
-    <p class="tagline">I take programs with too many moving parts and turn them into <strong>one clear plan</strong> that teams can actually execute.</p>
+    <h1 class="name">Caroline<br>Cannon</h1>
+    <p class="ca-global">...</p>
+    <p class="tagline">...</p>
+  </div>
 
-    <img src="caroline.JPG" alt="Caroline Cannon" class="hero-photo">
-    
-  </header>
+  <img src="caroline.JPG" alt="Caroline Cannon" class="hero-photo">
+</header>
 
   <section class="approach">
     <h2>Approach</h2>
