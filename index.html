@@ -67,6 +67,13 @@
     margin: 0 0 22px;
     letter-spacing: -0.01em;
   }
+  p.ca-global{
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  color: var(--ink-soft);
+  letter-spacing: 0.02em;
+  margin: 0 0 20px;
+}
   p.tagline{
     font-size: clamp(18px, 2.6vw, 21px);
     color: var(--ink-soft);
@@ -76,51 +83,6 @@
   p.tagline strong{
     color: var(--ink);
     font-weight: 500;
-  }
-
-  /* converging threads signature */
-  .threads{
-    width: 100%;
-    max-width: 640px;
-    height: auto;
-    display: block;
-    margin-bottom: 8px;
-  }
-  .threads path{
-    fill: none;
-    stroke-width: 1.6;
-    stroke-linecap: round;
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
-    animation: draw 1.6s cubic-bezier(.2,.7,.3,1) forwards;
-  }
-  .threads path:nth-child(1){ stroke: #C9BFA8; animation-delay: 0.05s; }
-  .threads path:nth-child(2){ stroke: #B7AF9E; animation-delay: 0.15s; }
-  .threads path:nth-child(3){ stroke: #A6AFA0; animation-delay: 0.25s; }
-  .threads path:nth-child(4){ stroke: #93A69C; animation-delay: 0.35s; }
-  .threads path.main{
-    stroke: var(--slate);
-    stroke-width: 2.5;
-    animation-delay: 0.55s;
-  }
-  .threads circle{
-    fill: var(--clay);
-    opacity: 0;
-    animation: fadein 0.5s ease forwards;
-    animation-delay: 1.5s;
-  }
-  @keyframes draw{ to{ stroke-dashoffset: 0; } }
-  @keyframes fadein{ to{ opacity: 1; } }
-  @media (prefers-reduced-motion: reduce){
-    .threads path{ animation: none; stroke-dashoffset: 0; }
-    .threads circle{ animation: none; opacity: 1; }
-  }
-  .thread-caption{
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11.5px;
-    color: var(--ink-soft);
-    letter-spacing: 0.04em;
-    margin-top: 6px;
   }
 
   /* ---------- SECTIONS ---------- */
@@ -279,17 +241,10 @@
   <header class="hero">
     <div class="eyebrow">Program &amp; Project Management · 7+ Years</div>
     <h1 class="name">Caroline<br>Cannon</h1>
+    <p class="ca-global">CA Global — a name for the way I work: no borders, no single system, no team you can't reach across.</p>
     <p class="tagline">I take programs with too many moving parts and turn them into <strong>one clear plan</strong> that stakeholders at every level can actually act on.</p>
 
-    <svg class="threads" viewBox="0 0 640 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M 10 20 C 150 20, 250 68, 340 70" />
-      <path d="M 10 50 C 150 50, 250 68, 340 70" />
-      <path d="M 10 90 C 150 90, 250 72, 340 70" />
-      <path d="M 10 120 C 150 120, 250 72, 340 70" />
-      <path class="main" d="M 340 70 L 620 70" />
-      <circle cx="340" cy="70" r="4.5" />
-    </svg>
-    <div class="thread-caption">workstreams in → one plan out</div>
+    
   </header>
 
   <section class="approach">
